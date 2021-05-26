@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete11;
+import paquete11.Profesor;
+import paquete11.LibretaCalificacion;
+import paquete11.Calificacion;
 
 public class Ejecutor {
     public static void main(String[] args) {
@@ -30,10 +28,11 @@ public class Ejecutor {
         c3.establecerProfesor(profesor3);
         
         Calificacion [] lista = {c1, c2, c3}; 
-        
-        LibretaCalificacion libreta1 = new LibretaCalificacion("Justin Powers");
+        //puse lista
+        LibretaCalificacion libreta1 = new LibretaCalificacion("Justin Powers",lista);
         libreta1.establecerPromedio();
         libreta1.establecerPromedioCualitativo();
+        libreta1.establecerCalificaciones(lista);
         System.out.println(libreta1);
         
     }
